@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>FrontEnd</title>
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="./uikit/uikit.min.css" />
+        <link rel="stylesheet" href="./style.css">
+        <!-- UIkit JS -->
+        <script src="uikit/uikit.min.js"></script>
+        <script src="uikit/uikit-icons.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <div id="main">
+            <div id="mainMenuSideBar">
+                <div id="mainMenuSideBarContent">
+                    <ul class="mainMenuTabContainer uk-iconnav uk-iconnav-vertical" uk-tab>
+                        <a class="uk-icon mainMenuTab" uk-icon="icon: paint-bucket; ratio: 1.2"></a>
+                        <a class="uk-icon mainMenuTab" uk-icon="icon: comment; ratio: 1.2"></a>
+                        <a class="uk-icon mainMenuTab" uk-icon="icon: crosshairs; ratio: 1.2"></a>
+                        <a class="uk-icon mainMenuTab" uk-icon="icon: users; ratio: 1.2"></a>
+                        <a class="uk-icon mainMenuTab" uk-icon="icon: database; ratio: 1.2"></a>
+                        <a class="uk-icon mainMenuTab" uk-icon="icon: code; ratio: 1.2"></a>
+                        <a class="uk-icon mainMenuTab" uk-icon="icon: android; ratio: 1.2"></a>
+                    </ul>
+                </div>
+            </div>
+            <div id=adminWindow>
+                <div id="adminHeader" class=" uk-card uk-card-default uk-card-body">
+                    <p>
+                        <span id="adminHeaderTextFirst" class="adminHeaderText" style="color:red">ADMIN</span>
+                        <span id="" class="adminHeaderText" style="color:white">MENU</span>
+                        <a id="adminHeaderCloseButton" class="uk-icon-button uk-align-right" uk-icon="icon: close; ratio: 1.5"></a>
+                    </p>
+                </div>
+                <div id="adminMenuPageSelectorContainer" class="uk-container">
+                    <ul id="adminMenuPageSelector" class="">
+                        <li class="adminMenuTabs"><a class="adminMenuTabsText" href="#">All</a></li>
+                        <li class="adminMenuTabs"><a class="adminMenuTabsText" href="#">Player</a></li>
+                        <li class="adminMenuTabs"><a class="adminMenuTabsText" href="#">Utility</a></li>
+                        <li class="adminMenuTabs"><a class="adminMenuTabsText" href="#">User</a></li>
+                        <li class="adminMenuTabs"><a class="adminMenuTabsText" href="#">Favorities</a></li>
+                    </ul>
+                    <br>
+                </div>
+                <div id="adminSearchContainer">
+                    <form id="adminSearchForm" class="uk-search uk-search-default">
+                        <input id="adminSearchInput" class="uk-search-input" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                    <a uk-icon="icon: search"></a>
+                </div>
+                <div>
+                    <ul uk-accordion>
+                        <li class = "adminListItem">
+                            <button uk-icon="icon: star; ratio: 1.2" class="favorite-button accordianTest uk-icon-button uk-button-default uk-margin-small-left uk-align-left"></button>
+                            <a class="uk-accordion-title titleText" href>Diary</a>
+                            <div class="uk-accordion-content">
+                                <form>
+                                    <label class="uk-form-label" for="form-stacked-text">Input</label>
+                                    <input id="input-box" class="uk-input" type="text" placeholder="Text">
+                                </form>
+                            </div>
+                        </li>
+                        <li class = "adminListItem">
+                            <button uk-icon="icon: star; ratio: 1.2" class="favorite-button accordianTest uk-icon-button uk-button-default uk-margin-small-left uk-align-left"></button>
+                            <a class="uk-accordion-title titleText" href>cSay</a>
+                            <div class="uk-accordion-content">
+                                <form>
+                                    <label  class="uk-form-label" for="form-stacked-text">Send Message From Player</label>
+                                    <input  id="cSayInputID" class="uk-input" type="text" placeholder="Player ID">
+                                    <input  id="cSayInputMSG" class="uk-input" type="text" placeholder="Message">
+                                </form>
+                                <button id="cSaySendButton" class="uk-button uk-button-primary uk-align-left">Send</button>
+                            </div>
+                        </li>
+                        <li class = "adminListItem">
+                            <button uk-icon="icon: star; ratio: 1.2" class="favorite-button accordianTest uk-icon-button uk-button-default uk-margin-small-left uk-align-left"></button>
+                            <a class="uk-accordion-title titleText" href>Delete Entity</a>
+                            <div class="uk-accordion-content">
+                                <form>
+                                    <label class="uk-form-label" for="form-stacked-text">Entity ID</label>
+                                    <input id="entityDeleteInput" class="uk-input" type="text" placeholder="ID">
+                                </form>
+                                <button id="entityDeleteButton" class="uk-button uk-button-primary uk-align-left">Delete</button>
+                            </div>
+                        </li>
+                        <li class = "adminListItem">
+                            <button uk-icon="icon: star; ratio: 1.2" class="favorite-button accordianTest uk-icon-button uk-button-default uk-margin-small-left uk-align-left"></button>
+                            <a class="uk-accordion-title titleText" href>Fix Vehicle</a>
+                            <div class="uk-accordion-content">
+                                <button id="fixCarButton" class="uk-button uk-button-primary uk-align-left">Repair</button>
+                            </div>
+                        </li>
+                        <li class = "adminListItem">
+                            <button uk-icon="icon: star; ratio: 1.2" class="favorite-button accordianTest uk-icon-button uk-button-default uk-margin-small-left uk-align-left"></button>
+                            <a class="uk-accordion-title titleText" href>Spawn Car</a>
+                            <div class="uk-accordion-content">
+                                <form>
+                                    <label class="uk-form-label" for="form-stacked-text">Car Name</label>
+                                    <input id="carInput" class="uk-input" type="text" placeholder="Name">
+                                </form>
+                                <button id="spawnCarButton" class="uk-button uk-button-primary uk-align-left">Spawn</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <script src="./script.js"></script>
+    <script src="./link.js"></script>
+    </body>
+</html>
